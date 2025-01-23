@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import { prototypejs } from 'globals'
-const Greeting=(props)=>{
-return <h1>Hi {props.name}</h1>
+
+const Greeting=({name})=>{// Destructuring props inside functional component's parameters
+
+return <h1>Hi {name}</h1>
+}
+const IndianGreeting=({name})=>{
+return <h1>Namaste {name}</h1>
 }
 function App() {
 
@@ -12,6 +14,8 @@ function App() {
   return (
     <>
      <Greeting name="React Learner"/>
+     <IndianGreeting name="React Learner"/>
+    
     </>
   )
 }
